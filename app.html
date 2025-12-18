@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fitness Goal Guessing Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .game-box {
+      background-color: white;
+      padding: 30px;
+      max-width: 400px;
+      margin: auto;
+      border-radius: 8px;
+    }
+
+    input, button {
+      padding: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="game-box">
+    <h1>Fitness Goal Game</h1>
+    <p>Guess the number of workouts I aim to complete each week (1–7).</p>
+
+    <input type="number" id="guess" min="1" max="7">
+    <br>
+    <button onclick="checkGuess()">Submit Guess</button>
+
+    <p id="result"></p>
+
+    <p><a href="scratch.html">Back to Scratch Page</a></p>
+  </div>
+
+  <script>
+    const goal = Math.floor(Math.random() * 7) + 1;
+
+    function checkGuess() {
+      const userGuess = document.getElementById("guess").value;
+      const result = document.getElementById("result");
+
+      if (userGuess == goal) {
+        result.textContent = "Correct! Consistency is key to fitness.";
+      } else {
+        result.textContent = "Not quite. Try again!";
+      }
+    }
+  </script>
+
+</body>
+</html>
