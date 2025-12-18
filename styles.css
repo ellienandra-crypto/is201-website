@@ -28,3 +28,13 @@ a {
 a:hover {
   text-decoration: underline;
 }
+.image-section {
+  text-align: center;
+}
+
+.fitness-image {
+  width: 60%;
+  max-width: 400px;
+  border-radius: 10px;
+  margin-top: 15px;
+}
